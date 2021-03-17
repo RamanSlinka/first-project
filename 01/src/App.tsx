@@ -6,7 +6,7 @@ import OnOff from "./Components/OnOff/OnOff";
 import UncontrolledAccordion from "./Components/UncontroledAccordion/UncontroledAccordion";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import UncontrolledOnOff from "./Components/UncontrolledOnOff/OnOff";
-import {UncontrolledInput} from "./Components/Uncontrolled_Input/UncontrolledInput";
+import {UncontrolledInput, UncontrolledInputWithButton} from "./Components/Uncontrolled_Input/UncontrolledInput";
 
 
 function App () {
@@ -33,6 +33,7 @@ function App () {
             {/*<UncontrolledOnOff on={switchOn} onChange={(on) => {setSwitchOn(on)}}/>*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledInput/>
+            <UncontrolledInputWithButton/>
         </div>
 
     );
