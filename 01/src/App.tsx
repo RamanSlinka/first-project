@@ -6,6 +6,7 @@ import OnOff from "./Components/OnOff/OnOff";
 import UncontrolledAccordion from "./Components/UncontroledAccordion/UncontroledAccordion";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import UncontrolledOnOff from "./Components/UncontrolledOnOff/OnOff";
+import {UncontrolledInput} from "./Components/Uncontrolled_Input/UncontrolledInput";
 
 
 function App () {
@@ -20,18 +21,20 @@ function App () {
             {/* <PageTitle title={'Hello my friends'}/>*/}
             <OnOff/>
             <UncontrolledRating/>
-            <UncontrolledAccordion title={'Menu :'}/>
+            <UncontrolledAccordion title={'Menu :  (click)'}/>
 
 
 
-            <Accordion title={'Users :'}
+            <Accordion title={'Users :  (click)'}
                        collapsed={accordionCollapsed}
                        onChange={() => {setAccordionCollapsed(!accordionCollapsed)} } />
 
             <UncontrolledOnOff on={!accordionCollapsed} onChange={(on) => {setAccordionCollapsed(on)}}/>
             {/*<UncontrolledOnOff on={switchOn} onChange={(on) => {setSwitchOn(on)}}/>*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
+            <UncontrolledInput/>
         </div>
+
     );
 }
 
