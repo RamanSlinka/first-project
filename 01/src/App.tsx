@@ -7,6 +7,7 @@ import UncontrolledAccordion from "./Components/UncontroledAccordion/Uncontroled
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 import UncontrolledOnOff from "./Components/UncontrolledOnOff/OnOff";
 import {UncontrolledInput, UncontrolledInputWithButton} from "./Components/Uncontrolled_Input/UncontrolledInput";
+import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./Components/controlled_input/ControledInput";
 
 
 function App () {
@@ -32,8 +33,14 @@ function App () {
             <UncontrolledOnOff on={!accordionCollapsed} onChange={(on) => {setAccordionCollapsed(on)}}/>
             {/*<UncontrolledOnOff on={switchOn} onChange={(on) => {setSwitchOn(on)}}/>*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
+            <hr/>
             <UncontrolledInput/>
             <UncontrolledInputWithButton/>
+            <hr/>
+            <p>Inputs controlled (for state)</p>
+            <ControlledSelect/>
+            <ControlledCheckbox/>
+            <ControlledInput/>
         </div>
 
     );
