@@ -10,11 +10,13 @@ import {UncontrolledInput, UncontrolledInputWithButton} from "./Components/Uncon
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./Components/controlled_input/ControledInput";
 
 
-function App () {
+function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
     let [switchOn, setSwitchOn] = useState<boolean>(false)
+
+   /* const onClickCallback = () => { (value) => {console.log(value)}}*/
 
     return (
         <div className={'App'}>
@@ -25,12 +27,23 @@ function App () {
             <UncontrolledAccordion title={'Menu :  (click)'}/>
 
 
+            <Accordion
+                items={
+                    [{title: 'Raman', value: 1},
+                        {title: 'Anna', value: 2},
+                        {title: 'Sofia', value: 3},
+                        {title: 'Robert', value: 4}]
+                }
+                onClick={(title) => {console.log(title)}}
+                title={'Users :  (click)'}
+                collapsed={accordionCollapsed}
+                onChange={() => {
+                    setAccordionCollapsed(!accordionCollapsed)
+                }}/>
 
-            <Accordion title={'Users :  (click)'}
-                       collapsed={accordionCollapsed}
-                       onChange={() => {setAccordionCollapsed(!accordionCollapsed)} } />
-
-            <UncontrolledOnOff on={!accordionCollapsed} onChange={(on) => {setAccordionCollapsed(on)}}/>
+            <UncontrolledOnOff on={!accordionCollapsed} onChange={(on) => {
+                setAccordionCollapsed(on)
+            }}/>
             {/*<UncontrolledOnOff on={switchOn} onChange={(on) => {setSwitchOn(on)}}/>*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <hr/>
@@ -48,8 +61,8 @@ function App () {
 
 
 type PagePropsTitle = {
-        title: string
-    }
+    title: string
+}
 
 function PageTitle(props: PagePropsTitle) {
 
