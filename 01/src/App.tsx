@@ -20,6 +20,7 @@ function App() {
 
     return (
         <div className={'App'}>
+
             <PageTitle title={'This is APP components'}/>
             {/* <PageTitle title={'Hello my friends'}/>*/}
             <OnOff/>

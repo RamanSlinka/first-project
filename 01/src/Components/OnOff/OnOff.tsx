@@ -13,6 +13,7 @@ export default function OnOff(props: OnOffPropsTitle) {
         width: '30px',
         weight: '20px',
         border: '1px solid black',
+        borderRadius: '5px',
         display: 'inline-block',
         background: on ? 'green' : 'white'
     };
@@ -22,6 +23,7 @@ export default function OnOff(props: OnOffPropsTitle) {
         width: '30px',
         weight: '20px',
         border: '1px solid black',
+        borderRadius: '5px',
         display: 'inline-block',
         background: on ?  'white': 'red'
     };

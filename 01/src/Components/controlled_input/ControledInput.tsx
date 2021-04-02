@@ -1,5 +1,5 @@
 import React, {ChangeEvent, useState} from "react";
-import {TextField} from "@material-ui/core";
+import {Checkbox, TextField} from "@material-ui/core";
 
 export function ControlledInput() {
 const [parentValue, setParentValue] = useState('');
@@ -12,6 +12,7 @@ const onChange =  (e: ChangeEvent<HTMLInputElement>) => {setParentValue(e.curren
                        label="Value"
                        variant="outlined"
                        size="small"
+
                        value={parentValue}
                        onChange={onChange}/>
         </div>
@@ -22,7 +23,9 @@ const [checked, setChecked] = useState(true)
     const onChange = (e: ChangeEvent<HTMLInputElement> ) => {setChecked(e.currentTarget.checked)}
     return (
         <div>
-            <input type="checkbox" checked={checked} onChange={onChange}/>
+            <Checkbox color="primary"
+                      checked={checked}
+                      onChange={onChange}/>
         </div>
     )
 }
