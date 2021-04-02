@@ -16,7 +16,7 @@ function App() {
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true)
     let [switchOn, setSwitchOn] = useState<boolean>(false)
 
-   /* const onClickCallback = () => { (value) => {console.log(value)}}*/
+    /* const onClickCallback = () => { (value) => {console.log(value)}}*/
 
     return (
         <div className={'App'}>
@@ -29,12 +29,16 @@ function App() {
 
             <Accordion
                 items={
-                    [{title: 'Raman', value: 1},
+                    [
+                        {title: 'Raman', value: 1},
                         {title: 'Anna', value: 2},
                         {title: 'Sofia', value: 3},
-                        {title: 'Robert', value: 4}]
+                        {title: 'Robert', value: 4}
+                    ]
                 }
-                onClick={(title) => {console.log(title)}}
+                onClick={(title) => {
+                    console.log(title)
+                }}
                 title={'Users :  (click)'}
                 collapsed={accordionCollapsed}
                 onChange={() => {
