@@ -1,4 +1,5 @@
 import React, {ChangeEvent, useRef, useState} from "react";
+import {Button, TextField} from "@material-ui/core";
 
 
 export function UncontrolledInput() {
@@ -10,7 +11,12 @@ export function UncontrolledInput() {
     return (
         <div>
             <p>Uncontrolled Input:</p>
-            <input onChange={onChange}/> - {value}
+            {/*<input onChange={onChange}/>*/}
+            <TextField id="outlined-basic"
+                       label="Value"
+                       variant="outlined"
+                       size="small"
+                       onChange={onChange}/>- {value}
         </div>
     )
 }
@@ -25,8 +31,16 @@ export function UncontrolledInputWithButton() {
     return (
         <div>
             <p>Uncontrolled input + button:</p>
-            <input ref={inputRef}/>
-            <button onClick={save}>save</button>
+            <TextField id="outlined-basic"
+                       label="Value"
+                       variant="outlined" size="small"
+                       ref={inputRef}/>
+            {/*<input ref={inputRef}/>*/}
+            <Button variant="contained" color="primary" size="medium"
+                    onClick={save}>
+                Save
+            </Button>
+           {/* <button onClick={save}>save</button>*/}
             - actual value {value}
         </div>
     )

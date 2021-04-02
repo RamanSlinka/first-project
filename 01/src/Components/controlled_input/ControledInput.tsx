@@ -1,12 +1,19 @@
 import React, {ChangeEvent, useState} from "react";
+import {TextField} from "@material-ui/core";
 
 export function ControlledInput() {
 const [parentValue, setParentValue] = useState('');
 const onChange =  (e: ChangeEvent<HTMLInputElement>) => {setParentValue(e.currentTarget.value)}
     return (
         <div>
-            <input value={parentValue}
-                   onChange={onChange}/>
+            {/*<input value={parentValue}
+                   onChange={onChange}/>*/}
+            <TextField id="outlined-basic"
+                       label="Value"
+                       variant="outlined"
+                       size="small"
+                       value={parentValue}
+                       onChange={onChange}/>
         </div>
     )
 }
