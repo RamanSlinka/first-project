@@ -8,6 +8,7 @@ import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRa
 import UncontrolledOnOff from "./Components/UncontrolledOnOff/OnOff";
 import {UncontrolledInput, UncontrolledInputWithButton} from "./Components/Uncontrolled_Input/UncontrolledInput";
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./Components/controlled_input/ControledInput";
+import Factorial from "./Components/Factorial/Factorial";
 
 
 function App() {
@@ -59,6 +60,8 @@ function App() {
             <ControlledSelect/>
             <ControlledCheckbox/>
             <ControlledInput/>
+            <hr/>
+            <Factorial/>
         </div>
 
     );
