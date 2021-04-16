@@ -9,6 +9,7 @@ import UncontrolledOnOff from "./Components/UncontrolledOnOff/OnOff";
 import {UncontrolledInput, UncontrolledInputWithButton} from "./Components/Uncontrolled_Input/UncontrolledInput";
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./Components/controlled_input/ControledInput";
 import Factorial from "./Components/Factorial/Factorial";
+import ReactMemo from "./Components/ReactMemo";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     return (
         <div className={'App'}>
 
-            <PageTitle title={'This is APP components'}/>
+            <PageTitle title={'This is APP components for study'}/>
             {/* <PageTitle title={'Hello my friends'}/>*/}
             <OnOff/>
             <UncontrolledRating/>
@@ -60,6 +61,8 @@ function App() {
             <ControlledSelect/>
             <ControlledCheckbox/>
             <ControlledInput/>
+            <hr/>
+            <ReactMemo/>
             <hr/>
             <Factorial/>
         </div>
