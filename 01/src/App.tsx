@@ -12,6 +12,7 @@ import Factorial from "./Components/Factorial/Factorial";
 import ReactMemo from "./Components/ReactMemo";
 import LikeUseCallback from "./Components/UseCallback";
 import {UseStateComponent} from "./Components/UseState";
+import {UseEffectComponent} from "./Components/UseEffect";
 
 
 function App() {
@@ -71,6 +72,8 @@ function App() {
             <LikeUseCallback/>
             <hr/>
             <UseStateComponent/>
+            <hr/>
+            <UseEffectComponent/>
         </div>
 
     );
