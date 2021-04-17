@@ -6,16 +6,28 @@ const [counter, setCounter] = useState(1)
     console.log('useEffect component')
 
     useEffect(() => {
-        console.log('useEffect start')
-        document.title = counter.toString()
+        console.log('useEffect render')
+       // document.title = counter.toString()
+
+       /* setTimeout(() => {
+            console.log('setTimeout')
+           // document.title = counter.toString()
+        }, 1000)*/
+        setInterval(() => {
+            console.log('setInterval')
+             setCounter((state)=> state + 1)
+        }, 10000)
+
+    }, [])
 
 
-    })
+
+
     return (
         <>
         <h4>UseEffect component</h4>
-
-            <button onClick={() => setCounter(counter + 1)}></button>
+            {counter}
+            <button onClick={() => setCounter(counter + 1)}>click</button>
         </>
     )
 }
