@@ -22,7 +22,7 @@ const ReactMemo = () => {
     const [users, setUsers] = useState(['Raman', 'Anna', 'Sofik', 'Robert']);
 
     const addUser = () => {
-        const newUsers = [...users, 'family' + new Date().getTime()]
+        const newUsers = [...users, 'Our family ' + new Date().getTime()]
         setUsers(newUsers)
     }
 
