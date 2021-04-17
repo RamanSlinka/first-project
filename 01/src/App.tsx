@@ -10,6 +10,7 @@ import {UncontrolledInput, UncontrolledInputWithButton} from "./Components/Uncon
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./Components/controlled_input/ControledInput";
 import Factorial from "./Components/Factorial/Factorial";
 import ReactMemo from "./Components/ReactMemo";
+import LikeUseCallback from "./Components/UseCallback";
 
 
 function App() {
@@ -65,6 +66,9 @@ function App() {
             <ReactMemo/>
             <hr/>
             <Factorial/>
+            <hr/>
+            <LikeUseCallback/>
+            <hr/>
         </div>
 
     );

@@ -2,8 +2,7 @@ import React, {useState} from "react";
 
 
 const MessageCounter = (props: { count: number }) => {
-    console.log('counter')
-    return <div>{props.count}</div>
+       return <div>{props.count}</div>
 }
 
 const UsersSecret = (props: { users: Array<string> }) => {
@@ -12,12 +11,10 @@ const UsersSecret = (props: { users: Array<string> }) => {
         props.users.map((u, i) => <div key={i}> {u}</div>)
     }</div>
 }
+
+
 const Users = React.memo(UsersSecret)
 const NewMessageCounter = React.memo(MessageCounter)
-
-
-
-
 
 const ReactMemo = () => {
     console.log('ReactMemo component')
@@ -26,19 +23,21 @@ const ReactMemo = () => {
 
     const addUser = () => {
         const newUsers = [...users, 'family' + new Date().getTime()]
-               setUsers(newUsers)
+        setUsers(newUsers)
     }
 
     return <>
         <h3>React.memo</h3>
-        <button onClick={() => setCounter(counter + 1)}> + </button>
+        <button onClick={() => setCounter(counter + 1)}> +</button>
         <span> Counter</span>
         <NewMessageCounter count={counter}/>
-        <button onClick={addUser}> add user </button>
+        <button onClick={addUser}> add user</button>
         <Users users={users}/>
     </>
 }
 export default ReactMemo
+
+
 
 
 
