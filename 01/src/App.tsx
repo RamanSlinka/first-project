@@ -11,6 +11,7 @@ import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./Component
 import Factorial from "./Components/Factorial/Factorial";
 import ReactMemo from "./Components/ReactMemo";
 import LikeUseCallback from "./Components/UseCallback";
+import {UseStateComponent} from "./Components/UseState";
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
             <hr/>
             <LikeUseCallback/>
             <hr/>
+            <UseStateComponent/>
         </div>
 
     );
