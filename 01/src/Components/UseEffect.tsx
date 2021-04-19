@@ -13,11 +13,14 @@ const [counter, setCounter] = useState(1)
             console.log('setTimeout')
            // document.title = counter.toString()
         }, 1000)*/
-        setInterval(() => {
+       const interval = setInterval(() => {
             console.log('setInterval')
              setCounter((state)=> state + 1)
-        }, 10000)
+        }, 100000)
 
+        return () => {
+           clearInterval(interval)
+        }
     }, [])
 
 

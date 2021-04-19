@@ -13,6 +13,7 @@ import ReactMemo from "./Components/ReactMemo";
 import LikeUseCallback from "./Components/UseCallback";
 import {UseStateComponent} from "./Components/UseState";
 import {UseEffectComponent} from "./Components/UseEffect";
+import {Clock} from "./Components/Clock/Clock";
 
 
 function App() {
@@ -74,6 +75,8 @@ function App() {
             <UseStateComponent/>
             <hr/>
             <UseEffectComponent/>
+            <hr/>
+            <Clock/>
         </div>
 
     );
