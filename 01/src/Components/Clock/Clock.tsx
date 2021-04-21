@@ -22,7 +22,7 @@ export const Clock = (props: PropsType) => {
 
 
 
-    let view ;
+   /* let view ;
 
     switch (props.mode) {
         case 'analog' :
@@ -31,9 +31,12 @@ export const Clock = (props: PropsType) => {
         case "digital":
         default:
             view = <DigitalClockView  date={date}/>
-    }
+    }*/
     return <div>
-        {view}
+      {/*  {view}*/}
+
+        <AnalogClockView date={date}/>
+        <DigitalClockView  date={date}/>
     </div>
 }
 
