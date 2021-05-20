@@ -77,6 +77,8 @@ function App() {
             <UseEffectComponent/>
             <hr/>
             <Clock/>
+            <hr/>
+
         </div>
 
     );
