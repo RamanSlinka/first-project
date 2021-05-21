@@ -14,6 +14,7 @@ import LikeUseCallback from "./Components/UseCallback";
 import {UseStateComponent} from "./Components/UseState";
 import {UseEffectComponent} from "./Components/UseEffect";
 import {Clock} from "./Components/Clock/Clock";
+import {ResetUseEffect} from "./Components/ResetUseEffect/ResetUseEffect";
 
 
 function App() {
@@ -78,7 +79,7 @@ function App() {
             <hr/>
             <Clock/>
             <hr/>
-
+            <ResetUseEffect/>
         </div>
 
     );
